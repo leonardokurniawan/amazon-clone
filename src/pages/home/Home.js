@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Product from './Product';
+import Product from '../../components/product/Product';
 
 function Home() {
 	return (
@@ -25,7 +25,7 @@ function Home() {
 						title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl, Removable Splash Guard, 1000 W, Red"
 						price={305.91}
 						image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
-						rating={5}
+						rating={4}
 					/>
 				</div>
 				<div className="home__row">
@@ -48,7 +48,7 @@ function Home() {
 						id={501223}
 						title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
 						price={969.0}
-						image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
+						image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
 						rating={5}
 					/>
 				</div>

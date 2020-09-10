@@ -1,10 +1,11 @@
 import React from 'react';
 import './Subtotal.css';
 import CurrencyFormat from 'react-currency-format';
-import {useStateValue} from './StateProvider';
+import {useStateValue} from '../../context/StateProvider';
+import {getBasketTotal} from '../../services/reducer';
 
 function Subtotal() {
-	const [{basket, subTotal}, dispatch] = useStateValue();
+	const [{basket}, dispatch] = useStateValue();
 
 	return (
 		<div className="subtotal">
@@ -22,7 +23,7 @@ function Subtotal() {
 					</>
 				)}
 				decimalScale={2}
-				value={subTotal}
+				value={getBasketTotal(basket)}
 				displayType={'text'}
 				thousandSeparator={true}
 				prefix={'£'}
