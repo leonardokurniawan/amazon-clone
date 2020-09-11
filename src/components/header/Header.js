@@ -4,7 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {Link} from 'react-router-dom';
 import {useStateValue} from '../../context/StateProvider';
-import {auth} from '../../firebase';
+import {auth} from '../../services/firebase';
 
 function Header() {
 	const [{basket, user}, dispatch] = useStateValue();
@@ -38,10 +38,12 @@ function Header() {
 					</div>
 				</Link>
 
-				<div className="header__option">
-					<span className="header__optionLineOne">Returns</span>
-					<span className="header__optionLineTwo">& Orders</span>
-				</div>
+				<Link to="/orders">
+					<div className="header__option">
+						<span className="header__optionLineOne">Returns</span>
+						<span className="header__optionLineTwo">& Orders</span>
+					</div>
+				</Link>
 
 				<div className="header__option">
 					<span className="header__optionLineOne">Your</span>
